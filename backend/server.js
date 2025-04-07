@@ -43,7 +43,7 @@ app.get('/api/weather', async (req, res) => {
 
       await weatherData.save();
       console.log('Weather data saved to MongoDB');
-      
+
       res.json(response.data);
 
     } catch (error) {
@@ -54,7 +54,7 @@ app.get('/api/weather', async (req, res) => {
     }
   });
 // Start server
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT;
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });

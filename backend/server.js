@@ -53,6 +53,10 @@ app.get('/api/weather', async (req, res) => {
       res.status(500).json({ message: 'Failed to fetch weather data', error: error.message });
     }
   });
+
+  app.get("/", (req, res) => {
+    res.send("Welcome to the Weather API!");
+  });
 // Start server
 const PORT = process.env.PORT;
 app.listen(PORT, () => {
